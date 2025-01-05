@@ -3,6 +3,7 @@
 Here’s a README template for your project:
 
 ---
+![Ekran Görüntüsü](https://i.imgur.com/yourimage.png](https://imgur.com/4M72gL0))
 
 # Mini Kurs API Projesi
 
