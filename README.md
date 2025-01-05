@@ -63,7 +63,7 @@ Bu projede, bir kurs yönetim sistemi oluşturulmuştur. Kullanıcılar siteye g
 - **Regular Kullanıcı**:
   - Giriş yaptıktan sonra, listelenen kursları satın alabilir ve "Kurslarım" kısmında satın aldığı kursları görüntüleyebilir.
 
-<img src="https://i.imgur.com/cTr9N62.png" width="400" height="300" />
+<img src="https://i.imgur.com/cTr9N62.png" width="500" height="300" />
 
 ## Kullanım
 
