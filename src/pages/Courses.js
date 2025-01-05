@@ -110,7 +110,7 @@ const Courses = () => {
       <Row>
         
         <Col md={9}>
-          {currentItems.map(course => (
+          {currentItems?.map(course => (
             <a
             key={course.id} 
             href={`/course/${course.id}`}

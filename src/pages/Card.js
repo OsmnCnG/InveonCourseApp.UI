@@ -6,7 +6,7 @@ import AuthContext from "../AuthContext";
 import { Link } from "react-router-dom";
 
 const Card = () => {
-  const { cartItems, removeFromCart, updateQuantity, calculateTotal } = useContext(CartContext);
+  const { cartItems, removeFromCart, updateQuantity, calculateTotal, setItemCount } = useContext(CartContext);
   const {isLoggedIn} = useContext(AuthContext);
 
   const checkout = () => {
