@@ -1,9 +1,4 @@
-
-
-Here’s a README template for your project:
-
----
-![Açıklama metni](https://i.imgur.com/4M72gL0.png)
+![Ekran Görüntüsü](https://i.imgur.com/4M72gL0.png)
 
 # Mini Kurs API Projesi
 
