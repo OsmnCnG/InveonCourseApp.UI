@@ -120,37 +120,36 @@ const CourseDetail = () => {
           <h3 className="mb-4">Kurs İçeriği</h3>
           <div className="mb-3">
             <Button color="link" onClick={toggle} style={{ textDecoration: 'none' }}>
-              Bölüm 1: React Temelleri
+              Bölüm 1: Kursun detayları
             </Button>
             <Collapse isOpen={isOpen}>
               <ListGroup flush>
                 <ListGroupItem className="d-flex justify-content-between align-items-center">
-                  <span>1. React'e Giriş</span>
+                  <span>1. Kurs Detayı</span>
                   <span className="text-muted">15:30</span>
                 </ListGroupItem>
                 <ListGroupItem className="d-flex justify-content-between align-items-center">
-                  <span>2. JSX Nedir?</span>
+                  <span>2. Kurs Detayı</span>
                   <span className="text-muted">20:45</span>
                 </ListGroupItem>
                 <ListGroupItem className="d-flex justify-content-between align-items-center">
-                  <span>3. Bileşenler ve Props</span>
+                  <span>3. Kurs Detayı</span>
                   <span className="text-muted">25:10</span>
                 </ListGroupItem>
               </ListGroup>
             </Collapse>
           </div>
-          {/* Diğer bölümler için benzer yapıyı tekrarlayabilirsiniz */}
         </Col>
         <Col md={4}>
           <Card>
             <CardBody>
               <h4 className="mb-3">Bu kursta öğrenecekleriniz</h4>
               <ul className="list-unstyled">
-                <li className="mb-2">✅ React'in temel kavramları</li>
-                <li className="mb-2">✅ Redux ile state yönetimi</li>
-                <li className="mb-2">✅ Modern JavaScript özellikleri</li>
-                <li className="mb-2">✅ React Hooks kullanımı</li>
-                <li className="mb-2">✅ RESTful API'ler ile çalışma</li>
+                <li className="mb-2">✅ 1.Konu</li>
+                <li className="mb-2">✅ 2.Konu</li>
+                <li className="mb-2">✅ 3.Konu</li>
+                <li className="mb-2">✅ 4.Konu</li>
+                <li className="mb-2">✅ 5.Konu</li>
               </ul>
             </CardBody>
           </Card>
