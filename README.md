@@ -43,7 +43,7 @@ Bu projede, bir kurs yönetim sistemi oluşturulmuştur. Kullanıcılar siteye g
 - **Instructor Girişi**: Eğer giriş yapan kullanıcı bir instructor hesabına sahipse, eğitim oluşturma ve yönetme bölümüne erişebilir.
 - **Regular Kullanıcı Girişi**: Normal kullanıcılar siteye giriş yaptıktan sonra kurs satın alabilirler. Satın aldıkları kurslara "Öğrenim içeriğim" bölümünden ulaşabilirler.
   
-<img src="https://i.imgur.com/tDnSraR.png" width="250" height="300" />
+<img src="https://i.imgur.com/tDnSraR.png" width="400" height="300" />
 
 
 
