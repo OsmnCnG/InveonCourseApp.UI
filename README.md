@@ -1,4 +1,3 @@
-![Ekran Görüntüsü](https://i.imgur.com/4M72gL0.png)
 <img src="https://i.imgur.com/4M72gL0.png" width="400" height="300" />
 
 # Mini Kurs API Projesi
