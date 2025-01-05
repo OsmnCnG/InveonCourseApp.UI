@@ -1,70 +1,77 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Here’s a README template for your project:
 
-In the project directory, you can run:
+---
 
-### `npm start`
+# Mini Kurs API Projesi
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Bu projede, bir kurs yönetim sistemi oluşturulmuştur. Kullanıcılar siteye giriş yaptıktan sonra, belirli yetkilere sahip kullanıcılara göre farklı işlemler yapabilirler. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Özellikler
 
-### `npm test`
+- **İki Instructor Hesabı**: Eğitim oluşturma yetkisine sahip kullanıcılar.
+- **Bir Regular Kullanıcı**: Kurs satın alma ve sahip olduğu kurslara erişme yetkisine sahip.
+- **Veritabanı Konfigürasyonu**: `application.json` dosyasına kullanıcı tarafından MySQL veritabanı bilgisi girilerek yapılandırılacaktır.
+- **Kurs Oluşturma ve Satın Alma**: Instructor hesapları eğitim oluşturabilirken, diğer kullanıcılar kurs satın alabilir ve "Kurslarım" bölümünde bu kurslara erişebilir.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Başlangıç
 
-### `npm run build`
+### Gereksinimler
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- MySQL veritabanı
+- .NET ve C# bilgisi
+- Node.js ve npm/yarn (frontend için)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Proje Yapısı
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Veritabanı Konfigürasyonu**: 
+   - `application.json` dosyasını düzenleyerek veritabanı bağlantı bilgilerini girin.
 
-### `npm run eject`
+```json
+{
+  "ConnectionStrings": {
+    "MySqlConnection": "Server=localhost;Database=InveonDbTest;User=root;Password=yourpassword;Port=3306;"
+  }
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Kullanıcı Seed Dosyası**:
+   - Proje başladığında `userSeed` dosyası otomatik olarak çalışacak ve aşağıdaki kullanıcılar veritabanına eklenecektir:
+     - **Instructor 1**: `instructor1@inveon.com` / `InveonInstructor1!`
+     - **Instructor 2**: `instructor2@inveon.com` / `InveonInstructor2!`
+     - **Regular User**: `user@inveon.com` / `InveonUser1!`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Kullanıcı Girişi ve Yetkiler
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Instructor Girişi**: Eğer giriş yapan kullanıcı bir instructor hesabına sahipse, eğitim oluşturma ve yönetme bölümüne erişebilir.
+- **Regular Kullanıcı Girişi**: Normal kullanıcılar siteye giriş yaptıktan sonra kurs satın alabilirler. Satın aldıkları kurslara "Kurslarım" bölümünden ulaşabilirler.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Veritabanı ve Kurulum
 
-## Learn More
+1. **Veritabanı Yapılandırma**:
+   - Proje başlamadan önce, veritabanı oluşturulmalı ve yapılandırılmalıdır. `application.json` dosyasındaki veritabanı bağlantı bilgilerini girerek bu bağlantıyı sağlarsınız.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Seed Verisi**:
+   - Projeyi ilk çalıştırdığınızda, `userSeed` dosyası otomatik olarak çalışacak ve veritabanına 2 instructor ve 1 normal kullanıcıyı ekleyecektir.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Kullanıcı Arayüzü
 
-### Code Splitting
+- **Instructor**:
+  - Giriş yaptıktan sonra eğitim oluşturabilir ve yönetebilir.
+  
+- **Regular Kullanıcı**:
+  - Giriş yaptıktan sonra, listelenen kursları satın alabilir ve "Kurslarım" kısmında satın aldığı kursları görüntüleyebilir.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Kullanım
 
-### Analyzing the Bundle Size
+1. Projeyi çalıştırın:
+   ```bash
+   dotnet run
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. `application.json` dosyasındaki veritabanı bilgilerini düzenleyin.
 
-### Making a Progressive Web App
+3. Siteye giriş yapın ve kullanıcı tipi doğrultusunda işlemler yapın.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
