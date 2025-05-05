@@ -47,7 +47,8 @@ const CreateCourse = () => {
         const token = localStorage.getItem("token");
         console.log(course)
         const response = await axios.post(
-          "https://localhost:7055/api/Course/CreateCourse",
+          //"https://localhost:7055/api/Course/CreateCourse",
+            "https://inveoncourseappapi-production.up.railway.app/api/Course/CreateCourse",
           course,
           {
             headers: {
