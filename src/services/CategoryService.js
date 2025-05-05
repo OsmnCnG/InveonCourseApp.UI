@@ -2,5 +2,5 @@ import axios from "axios";
 
 
 export async function getCategories() {
-    return await axios.get('https://localhost:7055/api/Category');
+    return await axios.get('https://inveoncourseappapi-production.up.railway.app/api/Category');
 }
