@@ -7,19 +7,21 @@ async function getToken() {
 
 export async function getCourses() {
     try {
-        return await axios.get('https://localhost:7055/api/Course');  
+        return await axios.get('https://inveoncourseappapi-production.up.railway.app/api/Course');  
     }catch (error) {
         console.error('Error fetching courses:', error);
     }
 }
 
 export async function getCoursesWithCategory() {
-    return await axios.get('https://localhost:7055/api/Course/CoursesWithCategory');
+    //return await axios.get('https://localhost:7055/api/Course/CoursesWithCategory');
+    //https://inveoncourseappapi-production.up.railway.app/api/Course
+    return await axios.get('https://inveoncourseappapi-production.up.railway.app/api/Course/CoursesWithCategory');
 }
 
 export async function getCourseById(id) {
     try {
-        const response = await axios.get(`https://localhost:7055/api/Course/GetCourseById`, {
+        const response = await axios.get(`https://inveoncourseappapi-production.up.railway.app/api/Course/GetCourseById`, {
             params: { id },
         });
         return response.data;
@@ -35,7 +37,7 @@ export async function getCourseByInstructorId(id) {
     try {
         const token = await getToken();
 
-        const response = await axios.get(`https://localhost:7055/api/Course/CoursesByInstructor`, {
+        const response = await axios.get(`https://inveoncourseappapi-production.up.railway.app/api/Course/CoursesByInstructor`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -58,7 +60,7 @@ export async function addCourseToUser(uId, pId) {
         console.log("userId:", uId);
         console.log("productId:", pId);
         const response = await axios.post(
-            `https://localhost:7055/api/Course/AddCourseToUser`,
+            `https://inveoncourseappapi-production.up.railway.app/api/Course/AddCourseToUser`,
             {
                 params: { uId, pId }
             }
@@ -78,7 +80,7 @@ export async function getUserCourses(userId) {
 
     try {
         const response = await axios.get(
-            `https://localhost:7055/api/Course/UserCourses`,
+            `https://inveoncourseappapi-production.up.railway.app/api/Course/UserCourses`,
             {
                 params: { userId }
             }
