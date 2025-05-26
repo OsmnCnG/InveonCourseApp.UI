@@ -19,7 +19,7 @@ const Login = () => {
     }
 
     try {
-        const response = await axios.post('https://localhost:7055/api/Auth/Login', {
+        const response = await axios.post('https://inveoncourseappapi-production.up.railway.app/api/Auth/Login', {
             email,
             password
           });
