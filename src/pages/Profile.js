@@ -34,7 +34,7 @@ const Profile = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `https://localhost:7055/api/User/UpdateUser?id=${user.id}`,
+        `https://inveoncourseappapi-production.up.railway.app/api/User/UpdateUser?id=${user.id}`,
         user,
         {
           headers: {
