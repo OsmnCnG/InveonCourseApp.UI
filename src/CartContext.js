@@ -100,7 +100,7 @@ export const CartProvider = ({ children }) => {
         // );
         for (const productId of productIds) {
           await axios.post(
-            `https://localhost:7055/api/Course/AddCourseToUser?userId=${userId}&productId=${productId}`
+            `https://inveoncourseappapi-production.up.railway.app/api/Course/AddCourseToUser?userId=${userId}&productId=${productId}`
           );
         }
         // await axios.post(
