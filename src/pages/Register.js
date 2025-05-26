@@ -24,7 +24,7 @@ const RegisterPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://localhost:7055/api/User', formData);
+      const response = await axios.post('https://inveoncourseappapi-production.up.railway.app/api/User', formData);
       if (response.status === 200) {
         alertify.success('Registration successful!');
         setFormData({ userName: '', email: '', phoneNumber: '', password: '' });
